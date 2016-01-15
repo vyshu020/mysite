@@ -1,5 +1,5 @@
 
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from models import Question, Choice
 from django.http import HttpResponse,Http404
 
@@ -16,10 +16,7 @@ def about_us(request):
     return HttpResponse("I have created this site. My name is Vyshnavi.")
 
 def detail(request, question_id):
-    try:
-        question=Question.objects.get(pk=question_id)
-    except Question.DoesNotExist:
-        raise Http404("Question does not exist")
+    question=get_object_or_404(Question,pk=question_id)
     context ={'question':question}
     return render(request,'polls/details.html',context)
 
