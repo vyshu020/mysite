@@ -4,8 +4,6 @@ from models import Question, Choice
 from django.http import HttpResponse,HttpResponseRedirect,Http404
 from django.core.urlresolvers import reverse
 
-# Create your views here.
-
 def index(request):
     my_latest_questions = Question.objects.order_by('pub_date')[:5]
     context = {
