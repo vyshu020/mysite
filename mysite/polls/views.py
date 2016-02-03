@@ -5,6 +5,7 @@ from django.http import HttpResponse,HttpResponseRedirect,Http404
 from django.core.urlresolvers import reverse
 from django.views import generic
 
+#generic View
 class IndexView(generic.ListView):
     model= Question.objects.order_by('pub_date')[:5]
     context_object_name = 'my_latest_questions_inside_template'
