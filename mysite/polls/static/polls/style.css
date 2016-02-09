@@ -1,3 +1,9 @@
 li a{
     color:green;
+    font-size: 26cm;
+}
+
+body {
+    background: white url("images/background.gif") no-repeat right bottom;
+    background-size: 100% auto;
 }
