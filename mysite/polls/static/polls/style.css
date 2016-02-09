@@ -4,6 +4,6 @@ li a{
 }
 
 body {
-    background: white url("images/download.jpg") no-repeat right bottom;
+    background: white url("images/download.jpg") no-repeat left top;
     background-size: 100% auto;
 }
