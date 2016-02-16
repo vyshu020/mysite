@@ -4,7 +4,7 @@ from .models import Question, Choice
 
 
 class QuestionAdmin(admin.ModelAdmin):
-    fields = [
+    fieldsets = [
         (None, {'fields':['question_text']}),
         ('Date Information',{'fields':['pub_date']}),
     ]
